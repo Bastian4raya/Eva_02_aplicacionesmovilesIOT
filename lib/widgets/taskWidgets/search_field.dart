@@ -16,7 +16,7 @@ class SearchField extends StatelessWidget {
         onChanged: onChanged,
         textInputAction: TextInputAction.search,
         decoration: const InputDecoration(
-          hintText: "Buscar tareas...",
+          hintText: "Buscar pedidos...",
           prefixIcon: Icon(Icons.search),
           border: OutlineInputBorder(),
           filled: true 

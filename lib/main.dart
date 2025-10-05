@@ -10,10 +10,12 @@ class MainApp extends StatelessWidget { // Define una clase MainApp que no puede
 
   @override
   Widget build(BuildContext context) {
-    // Define cómo se ve el widget
     return MaterialApp(
-      title: "Login y tarea", // Título de la aplicación
-      home: const LoginScreen(), // La primera pantalla que se muestra es LoginScreen
+      title: "Login",
+      theme: ThemeData(
+        scaffoldBackgroundColor: const Color.fromARGB(255, 240, 230, 230),
+      ),
+      home: const LoginScreen(),
     );
   }
 }

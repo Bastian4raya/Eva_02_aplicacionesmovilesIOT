@@ -42,7 +42,7 @@ class _LoginFieldsState extends State<LoginFields> {
     });
 
     try {
-      await Future.delayed(const Duration(milliseconds: 8000)); // Simula una llamada de red (auth).
+      await Future.delayed(const Duration(milliseconds: 1000)); // Simula una llamada de red (auth).
 
       if (!mounted) return;                                    // Seguridad: evita usar context si el widget se removió.
       Navigator.of(context).pushReplacement(                   // Reemplaza la pantalla actual por la de Tareas.
@@ -77,15 +77,15 @@ class _LoginFieldsState extends State<LoginFields> {
             Center(
               // Centra la imagen
               child: Image.network(
-                "https://i.ibb.co/gbM1xQbB/logo-inacap.jpg", // Logo de Inacap
-                height: 100,
+                "https://i.ibb.co/m5fMygCZ/redes.webp", 
+                height: 300,
                 fit: BoxFit.contain, // Ajusta la imagen sin recortarla
               ),
             ),
             const SizedBox(height: 16), // Espacio vertical
 
             const Text(
-              "Bienvenido Inacapino", // Mensaje de bienvenida
+              "Bienvenido a nuestra pasteleria", // Mensaje de bienvenida
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.w600,

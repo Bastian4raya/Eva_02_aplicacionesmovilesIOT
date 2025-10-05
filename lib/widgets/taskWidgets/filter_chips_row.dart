@@ -32,8 +32,8 @@ class FilterChipsRow extends StatelessWidget {
         spacing: 0,
         children: [
           chip("Todas", TaskFilter.all),
-          chip("Pendientes", TaskFilter.pending),
-          chip("Completas", TaskFilter.done)          
+          chip("En proceso", TaskFilter.pending),
+          chip("Entregados", TaskFilter.done)          
         ],
       ),
       );

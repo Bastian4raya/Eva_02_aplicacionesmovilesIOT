@@ -38,7 +38,8 @@ class _TaskScreenState extends State<TaskScreen> {
         final items = _ctrl.filtered;
         return Scaffold(
           appBar: AppBar(
-            title: const Text("Tareas"),
+            title: const Text("Pedidos"),
+            backgroundColor: const Color.fromARGB(255, 237, 179, 165),
             actions: [
               FilterMenuButton(value: _ctrl.filter, onChanged: _ctrl.setFilter),
             ],
@@ -48,7 +49,7 @@ class _TaskScreenState extends State<TaskScreen> {
                 _ctrl.add(title, note: note, due: due),
             onCreated: (ctx) => ScaffoldMessenger.of(
               ctx,
-            ).showSnackBar(const SnackBar(content: Text("Tarea Creada"))),
+            ).showSnackBar(const SnackBar(content: Text("Pedido Creado"))),
           ),
           body: SafeArea(
             child: Column(
@@ -69,7 +70,7 @@ class _TaskScreenState extends State<TaskScreen> {
                           onDelete: (t) {
                             _ctrl.remove(t);
                             ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(content: Text("Tarea Eliminada")),
+                              const SnackBar(content: Text("Pedido Eliminado")),
                             );
                           },
                           dateFormatter: formatShortDate,

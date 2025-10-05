@@ -8,35 +8,38 @@ class TaskController extends ChangeNotifier {
   // Lista privada de tareas iniciales (6 de ejemplo: 2 completadas, 2 pendientes con fecha, 2 sin fecha)
   final List<Task> _tasks = [
     Task(
-      title: 'Revisar enunciado de evaluación',
-      note: 'Sección B',
-      due: DateTime.now().add(const Duration(days: 1)), // Vence mañana
+      title: 'Hornear torta de chocolate 10 personas',
+      note: 'Para un evento corporativo',
+      due: DateTime.now().add(const Duration(days: 20)),
     ),
     Task(
-      title: 'Subir rúbrica a Aula',
-      done: true, // Tarea ya completada
+      title: 'Hornear 15 cupcakes de chocolate',
+      note: 'Para cumpleaños',
+      done: true, 
     ),
     Task(
-      title: 'Responder correos de alumnos',
-      due: DateTime.now().subtract(const Duration(days: 3)), // Vencida (hace 3 días)
+      title: 'Torta de Mil Hojas',
+      note: 'Sin gluten',
+      due: DateTime.now().subtract(const Duration(days: 3)),
     ),
     Task(
-      title: 'Preparar clase de Flutter',
-      note: 'Widgets y estado',
-      due: DateTime.now().add(const Duration(days: 7)), // Vence en una semana
+      title: 'Torta de Tres Leches',
+      note: 'Con fresas',
+      due: DateTime.now().add(const Duration(days: 12)), 
     ),
     Task(
-      title: 'Publicar notas en Aula',
-      done: true, // Tarea ya completada
+      title: 'Preparar 150 mini donas',
+      note: 'Para evento escolar',
+      done: true,
     ),
     Task(
-      title: 'Revisar proyecto final de curso', // Sin fecha de vencimiento
+      title: '10 queques marmoleados',
+      note: 'Para evento especial',
+      due: DateTime.now().subtract(const Duration(days: 2))
     ),
   ];
 
-  // Texto para búsqueda
   String _query = '';
-  // Filtro actual (todas, pendientes o completadas)
   TaskFilter _filter = TaskFilter.all;
 
   // ----- Lecturas (getters) -----
