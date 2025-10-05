@@ -5,7 +5,6 @@ import '../models/task.dart';
 
 // Controlador que maneja la lista de tareas y la lógica
 class TaskController extends ChangeNotifier {
-  // Lista privada de tareas iniciales (6 de ejemplo: 2 completadas, 2 pendientes con fecha, 2 sin fecha)
   final List<Task> _tasks = [
     Task(
       title: 'Hornear torta de chocolate 10 personas',
